@@ -3,33 +3,27 @@ import { EducationItem, CertificationItem } from '../types';
 
 const educationData: EducationItem[] = [
   {
-    id: 'mba',
-    degree: 'Master of Business Administration',
-    institution: 'Webster University',
-    year: 'Graduated 2019',
+    id: 'bba',
+    degree: 'Bachelor of Business Administration - Management Information Systems',
+    institution: 'Al Yamamah University',
+    year: 'Graduated 2013',
     color: 'bg-accent'
-  },
-  {
-    id: 'bsc',
-    degree: 'BSc in Aeronautical Engineering',
-    institution: 'Jordan University of Science and Technology',
-    year: 'Graduated 2017',
-    color: 'bg-text-muted'
   }
 ];
 
 const certificationData: CertificationItem[] = [
-  { id: '1', title: 'Advanced Software Development in Full-Stack JavaScript', issuer: 'ASAC, Luminus Technical University (02/2021)' },
-  { id: '2', title: 'Product-led Certification', issuer: 'Pendo.io (01/2023)' },
-  { id: '3', title: 'Product Analytics Micro-Certification (PAC)', issuer: 'Product School (01/2023)' },
-  { id: '4', title: 'API Product Manager', issuer: 'API Academy (10/2021)' },
-  { id: '5', title: 'Scrum Fundamentals Certified', issuer: 'SCRUMstudy (08/2021)' },
-  { id: '6', title: 'PMP Certification Training Course', issuer: 'Metanoia Training & Consulting (02/2020)' },
-  { id: '7', title: 'Fundamentals of Digital Marketing', issuer: 'Google (08/2020)' },
-  { id: '8', title: 'Google Analytics Individual Qualification', issuer: 'Google Digital Academy - Skillshop (08/2020)' }
+  { id: '1', title: 'McKinsey Forward Program', issuer: 'McKinsey (2024)' },
+  { id: '2', title: 'Kickoff Agile', issuer: 'PMI (2024)' },
+  { id: '3', title: 'Planning & Creating Pro Roadmaps', issuer: 'Productboard Academy (2023)' },
+  { id: '4', title: 'Master Course in Business Analysis', issuer: 'Udemy (2023)' },
+  { id: '5', title: 'Product Management Framework & Methodology', issuer: 'Udemy (2023)' },
+  { id: '6', title: 'Oracle Eloqua Certification', issuer: 'Oracle (2021)' },
+  { id: '7', title: 'Lean Six Sigma White Belt', issuer: 'Aveta Business Institute (2021)' },
+  { id: '8', title: 'Digital Marketing', issuer: 'Google (2020)' },
+  { id: '9', title: 'Jira & Confluence Fundamentals', issuer: 'Atlassian University (2022)' }
 ];
 
-const VISIBLE_CERTS = 2;
+const VISIBLE_CERTS = 4;
 
 const Education: React.FC = () => {
   const [showAllCerts, setShowAllCerts] = useState(false);
@@ -37,7 +31,7 @@ const Education: React.FC = () => {
 
   return (
     <section id="education" className="py-8 md:py-12 px-6 bg-bg-elevated">
-      <div className="max-w-[960px] mx-auto">
+      <div className="max-w-w-[960px] mx-auto">
         <div className="flex flex-col lg:flex-row gap-16 lg:gap-20">
           {/* Education */}
           <div className="lg:w-1/2">
@@ -47,7 +41,7 @@ const Education: React.FC = () => {
             <div className="space-y-8">
               {educationData.map((item, index) => (
                 <div key={item.id} className="relative pl-8 border-l-2 border-border-subtle">
-                  <div className={`absolute -left-[9px] top-1 size-4 rounded-full ${item.color} border-4 border-bg-elevated ${index === 0 ? 'animate-pulse-dot' : ''}`}></div>
+                  <div className={`absolute -left-[9px] top-1 size-4 rounded-full border-4 border-bg-elevated ${index === 0 ? 'animate-pulse-dot' : ''}`}></div>
                   <h4 className="text-base font-semibold text-text-primary mb-1">{item.degree}</h4>
                   <p className="text-accent text-sm mb-1">{item.institution}</p>
                   <p className="text-text-muted text-xs">{item.year}</p>
@@ -83,7 +77,7 @@ const Education: React.FC = () => {
                 <span className="material-symbols-outlined text-sm">
                   {showAllCerts ? 'expand_less' : 'expand_more'}
                 </span>
-                <span>{showAllCerts ? 'Show less' : `Show more (${certificationData.length - VISIBLE_CERTS})`}</span>
+                {showAllCerts ? 'Show less' : `Show ${certificationData.length - VISIBLE_CERTS} more`}
               </button>
             )}
           </div>

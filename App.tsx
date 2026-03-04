@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import Navbar from './components/Navbar';
 import BottomTabBar from './components/BottomTabBar';
 import Hero from './components/Hero';
@@ -9,38 +9,12 @@ import Projects from './components/Projects';
 import Education from './components/Education';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import Dashboard from './components/Dashboard';
 import { trackPageView, trackConversion } from './utils/analytics';
 
 function App() {
-  const [currentView, setCurrentView] = useState<'portfolio' | 'dashboard'>('portfolio');
-
   useEffect(() => {
-    const hash = window.location.hash;
-    if (hash === '#dashboard') {
-      setCurrentView('dashboard');
-    } else {
-      setCurrentView('portfolio');
-      trackPageView();
-    }
-    const handleHashChange = () => {
-      const newHash = window.location.hash;
-      if (newHash === '#dashboard') {
-        setCurrentView('dashboard');
-      } else {
-        setCurrentView('portfolio');
-        trackPageView();
-      }
-    };
-    window.addEventListener('hashchange', handleHashChange);
-    return () => {
-      window.removeEventListener('hashchange', handleHashChange);
-    };
+    trackPageView();
   }, []);
-
-  if (currentView === 'dashboard') {
-    return <Dashboard />;
-  }
 
   const handleCVDownload = () => {
     trackConversion('cv_download', { source: 'mobile_banner' });
@@ -51,8 +25,8 @@ function App() {
       {/* Mobile CV Download Banner */}
       <div className="md:hidden">
         <a
-          href="Mohammed-M.-ElSaheb-CV.pdf"
-          download="Mohammed El Saheb CV.pdf"
+          href="Mohammed M. ElSaheb CV - 19.0.pdf"
+          download
           onClick={handleCVDownload}
           className="relative flex items-center justify-center gap-2 w-full bg-accent hover:bg-accent-muted text-white py-2.5 text-xs font-medium transition-colors duration-300 overflow-hidden"
         >

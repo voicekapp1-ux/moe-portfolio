@@ -1,95 +1,122 @@
 import React from 'react';
 import { ExperienceItem } from '../types';
-import nanaLogo from '../nana.webp';
-import mrsoolLogo from '../mrsool.png';
-import foodicsLogo from '../foodics.png';
-import servicioLogo from '../servicio.jpeg';
 import { trackEngagement } from '../utils/analytics';
 
 const experienceData: ExperienceItem[] = [
   {
-    id: 'nana',
-    role: 'Senior Product Manager - Checkout',
-    company: 'Nana',
-    location: 'Riyadh',
+    id: 'severlbarands',
+    role: 'Senior Technical Product Manager',
+    company: 'Severlbarands',
+    location: 'Amman, Jordan',
     period: '2025 - Present',
-    logoUrl: nanaLogo,
-    companyUrl: 'https://nana.sa/',
+    logoUrl: null,
+    companyUrl: null,
     keyMetrics: [
-      '+10% AOV through basket-size promotions',
-      '+16% search conversion with semantic search',
-      '60% reduction in zero-result queries'
+      'MVP to market for PPC SaaS platform',
+      'Pay-per-call platform for US market',
+      'B2B lead generation revenue streams'
     ],
     achievements: [
-      'Led the strategy and execution of Nana\'s Checkout Squad, optimizing the checkout flow to drive higher conversion.',
-      'Increased Average Order Value (AOV) by <span class="text-accent font-medium">10%</span> through basket-size promotions and bundled offers that encouraged multi-item purchases.',
-      'Improved search conversion rate by <span class="text-accent font-medium">16%</span> by implementing semantic search, keyword suggestions, and categorized results to enhance product discoverability, reducing zero-result queries by <span class="text-accent font-medium">60%</span>.',
-      'Boosted store-level conversion by <span class="text-accent font-medium">5%</span> from store opening to add-to-cart through personalized recommendations and targeted in-store offers.',
-      'Enhanced Nana Pro subscription program experience, achieving <span class="text-accent font-medium">10% adoption</span> and increasing monthly orders from <span class="text-accent font-medium">2.3 to 6 per customer</span>.',
-      'Built an automated, AI-powered catalog enrichment pipeline with the catalog and commercial teams, expanding nutrition and attribute coverage across <span class="text-accent font-medium">35K+ SKUs</span> from <span class="text-accent font-medium">40% to 95%</span>.'
+      'Led end-to-end product strategy and development for pay-per-call (PPC) SaaS platform targeting the American market, enabling businesses to monetize inbound calls as lead generation revenue streams.',
+      'Architected and launched MarTech/AdTech solution for call-based lead generation, integrating call routing, tracking, and analytics capabilities to deliver measurable ROI for B2B clients.',
+      'Drove product roadmap from MVP to market entry, conducting competitive analysis against industry leaders Ringba, Invoca, defining technical specifications and collaborating with engineering teams.',
+      'Designed go-to-market strategy and pricing models for subscription-based PPC platform, positioning product as revenue enabler for businesses to sell calls as qualified leads.'
     ]
   },
   {
-    id: 'mrsool',
-    role: 'Product Manager',
-    company: 'Mrsool',
-    location: 'Riyadh',
-    period: '2024 - 2025',
-    logoUrl: mrsoolLogo,
-    companyUrl: 'https://www.mrsool.co/home/',
+    id: 'classera',
+    role: 'Senior Product Manager',
+    company: 'Classera',
+    location: 'Amman, Jordan',
+    period: '2022 - 2025',
+    logoUrl: null,
+    companyUrl: null,
     keyMetrics: [
-      '+14% AOV for Mrsool Grocery',
-      'SAR 1.5M monthly GMV from Public APIs',
-      'Order Failure Rate: 3% → 0.6%'
+      '+40% user engagement',
+      '-25% development cycle time',
+      '50+ educational institutions'
     ],
     achievements: [
-      'Led integrations with groceries, pharmacies, enterprise restaurants, and aggregator systems, driving streamlined operations and enhancing partner efficiency.',
-      'Owned and managed Mrsool Grocery service (magady), achieving a <span class="text-accent font-medium">14% increase</span> in Average Order Value (AOV) through strategic product optimization and enhanced user engagement.',
-      'Launched Mrsool Public APIs, unlocking new revenue opportunities with an expected <span class="text-accent font-medium">SAR 1.5M increase</span> in monthly GMV.',
-      'Optimized integration health, reducing the Order Failure Rate from <span class="text-accent font-medium">3% to 0.6%</span>, recovering <span class="text-accent font-medium">SAR 1.16M in GMV</span> monthly.',
-      'Increased Digital Card Store monthly GMV from <span class="text-accent font-medium">270K SAR to 570K SAR</span> through stabilizing the integration (with the cards provider).'
+      'Drove product strategy and roadmap that increased user engagement by <span class="text-accent font-medium">40%</span> across key segments through data-driven user research, competitive market analysis, and customer journey mapping.',
+      'Led cross-functional product development and feature prioritization with engineering, design, and QA teams, reducing development cycle time by <span class="text-accent font-medium">25%</span>.',
+      'Owned end-to-end product lifecycle from market research and MVP development to product launch and go-to-market execution, utilizing Power BI, Google Analytics, Mixpanel.',
+      'Managed product backlog and feature development for enterprise EdTech platform serving <span class="text-accent font-medium">50+</span> educational institutions.',
+      'Conducted competitive analysis and user research to identify growth opportunities and guide strategic product investments in the EdTech market.'
     ]
   },
   {
-    id: 'foodics',
-    role: 'Product Manager - Marketplace and Foodics Online',
-    company: 'Foodics',
-    location: 'Riyadh',
-    period: '2021 - 2024',
-    logoUrl: foodicsLogo,
-    companyUrl: 'https://www.foodics.com/',
+    id: 'labrys',
+    role: 'Product Implementation Manager',
+    company: 'Labrys Consultancy',
+    location: 'Istanbul, Turkey',
+    period: '2020 - 2022',
+    logoUrl: null,
+    companyUrl: null,
     keyMetrics: [
-      'GMV: $5.5M → $8M monthly',
-      'Orders: 350K → 500K monthly',
-      '15% mobile conversion rate'
+      '95% client satisfaction',
+      '+20% project completion rate',
+      '+35% lead conversion rate'
     ],
     achievements: [
-      'Enhanced Foodics Online Ordering Applications, driving a <span class="text-accent font-medium">15% mobile conversion rate</span> and <span class="text-accent font-medium">7% web conversion rate</span>.',
-      'Increased monthly orders from <span class="text-accent font-medium">350K to 500K</span>, boosting monthly GMV from <span class="text-accent font-medium">$5.5M to $8M</span> through strategic product enhancements and user-focused initiatives.',
-      'Delivered custom ordering applications for popular brands, like 1/2 M, Dunkin\' Donuts, and Herfy.',
-      'Led a comprehensive revamp of Foodics Marketplace (integrations marketplace), streamlining the integration\'s stability and usability.',
-      'Building integrations with leading food aggregators, delivery companies, and payment gateways to expand market reach.'
+      'Managed enterprise product implementations across MENA region, achieving <span class="text-accent font-medium">95%</span> client satisfaction through strategic stakeholder management and agile delivery.',
+      'Led product discovery and business requirements analysis for Oracle ERP and Fusion implementations, increasing project completion rates by <span class="text-accent font-medium">20%</span>.',
+      'Designed and launched automated marketing products using Oracle Eloqua, driving <span class="text-accent font-medium">35%</span> increase in lead conversion rates.',
+      'Translated business requirements into technical specifications and product roadmaps, ensuring seamless product launch execution through agile product management.'
     ]
   },
   {
-    id: 'servicio',
-    role: 'Business Analyst',
-    company: 'Servicio',
-    location: 'Doha',
-    period: '2018 - 2020',
-    logoUrl: servicioLogo,
-    companyUrl: 'https://www.linkedin.com/company/serviciome/',
+    id: 'alyamamah',
+    role: 'Senior Product Operations Manager / Acting IT Director',
+    company: 'Al Yamamah University',
+    location: 'Riyadh, Saudi Arabia',
+    period: '2015 - 2020',
+    logoUrl: null,
+    companyUrl: null,
     keyMetrics: [
-      'Built product from 0 to 1',
-      'Launched 5 service categories',
-      '24/7 emergency services capability'
+      '+30% operational efficiency',
+      '+25% student satisfaction',
+      '+50% web traffic'
     ],
     achievements: [
-      'Built the home services application from <span class="text-accent font-medium">0 to 1</span>, leading product strategy, design, and development from concept to launch.',
-      'Designed and implemented core features including service booking, provider matching, real-time tracking, and secure payment processing.',
-      'Established product-market fit by conducting user research, defining MVP scope, and iterating based on early customer feedback.',
-      'Launched the platform with key service categories including home repair, cleaning, carpentry, gardening, and AC maintenance.',
-      'Built scalable architecture and integrations to support 24/7 operations and emergency services functionality.'
+      'Led digital product strategy for the university technology platform, improving operational efficiency by <span class="text-accent font-medium">30%</span> and student satisfaction by <span class="text-accent font-medium">25%</span>.',
+      'Owned product lifecycle management and budget planning for IT initiatives, aligning technology investments with institutional goals.',
+      'Spearheaded website product redesign using WordPress CMS, driving <span class="text-accent font-medium">50%</span> increase in web traffic through improved UX and product analytics.',
+      'Established product documentation standards and agile workflows, improving issue resolution times and stakeholder visibility.'
+    ]
+  },
+  {
+    id: 'microsoft',
+    role: 'Product Marketing Coordinator',
+    company: 'Microsoft Innovation Center',
+    location: 'Riyadh, Saudi Arabia',
+    period: '2013 - 2015',
+    logoUrl: null,
+    companyUrl: null,
+    keyMetrics: [
+      '+30% event attendance',
+      '90% partner satisfaction',
+      'Strategic partnerships'
+    ],
+    achievements: [
+      'Developed go-to-market strategies and product launch plans for Microsoft Partner events, increasing attendance by <span class="text-accent font-medium">30%</span> through targeted marketing campaigns.',
+      'Built and maintained strategic business relationships with key partners, achieving <span class="text-accent font-medium">90%</span> satisfaction rate through consultative product management.'
+    ]
+  },
+  {
+    id: 'netways',
+    role: 'Product Quality Manager',
+    company: 'Netways Limited ISP',
+    location: 'Riyadh, Saudi Arabia',
+    period: '2011 - 2013',
+    logoUrl: null,
+    companyUrl: null,
+    keyMetrics: [
+      '-25% customer issues',
+      '-20% response times',
+      'B2B & B2C frameworks'
+    ],
+    achievements: [
+      'Implemented product quality frameworks for B2B and B2C service offerings, reducing customer issues by <span class="text-accent font-medium">25%</span> and improving response times by <span class="text-accent font-medium">20%</span>.'
     ]
   }
 ];
@@ -98,75 +125,41 @@ const Experience: React.FC = () => {
   return (
     <section id="experience" className="py-8 md:py-12 px-6 bg-bg-elevated">
       <div className="max-w-[960px] mx-auto">
-        <div className="mb-12">
+        <div className="mb-10">
           <p className="text-xs font-medium uppercase tracking-wider text-accent mb-3">Experience</p>
           <h2 className="text-2xl md:text-3xl font-semibold text-text-primary">Professional Journey</h2>
         </div>
-
-        <div className="space-y-6">
-          {experienceData.map((item) => (
+        <div className="space-y-4">
+          {experienceData.map((item, index) => (
             <div
               key={item.id}
-              className="group bg-bg-surface border border-border-subtle hover:border-border-active rounded-xl p-6 md:p-8 transition-all duration-300 hover-lift"
+              className="relative pl-8 border-l-2 border-border-subtle pb-8 last:pb-0"
             >
-              <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
-                <div className="flex items-center gap-4">
-                  <div className="size-14 bg-white rounded-xl flex items-center justify-center p-2.5 shadow-sm">
-                    <img className="w-full h-full object-contain" src={item.logoUrl} alt={`Logo for ${item.company}`} />
-                  </div>
+              <div className="absolute -left-[9px] top-1 size-4 rounded-full bg-bg-elevated border-2 border-accent"></div>
+              <div className="bg-bg-surface border border-border-subtle rounded-xl p-5 hover:border-accent/30 transition-colors">
+                <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-3">
                   <div>
-                    <h3 className="text-base md:text-lg font-semibold text-text-primary group-hover:text-accent transition-colors duration-300">
-                      {item.role}
-                    </h3>
-                    <p className="text-text-muted text-sm">
-                      {item.companyUrl ? (
-                        <a
-                          href={item.companyUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="hover:text-accent transition-colors"
-                          onClick={() => trackEngagement('company_link_click', { company: item.company, url: item.companyUrl })}
-                        >
-                          {item.company}
-                        </a>
-                      ) : (
-                        item.company
-                      )}
-                      {' · '}{item.location}
-                    </p>
+                    <h3 className="font-semibold text-text-primary text-base">{item.role}</h3>
+                    <p className="text-accent text-sm mt-0.5">{item.company} &middot; {item.location}</p>
                   </div>
+                  <span className="text-xs text-text-muted bg-bg-base px-3 py-1 rounded-full border border-border-subtle whitespace-nowrap">{item.period}</span>
                 </div>
-                <span className="text-xs text-text-muted tracking-wide bg-bg-elevated px-3 py-1.5 rounded-full">
-                  {item.period}
-                </span>
-              </div>
-
-              {/* Key Impact Metrics Box */}
-              {item.keyMetrics && item.keyMetrics.length > 0 && (
-                <div className="mb-6 p-4 rounded-lg bg-accent/10 border border-accent/20">
-                  <div className="flex items-center gap-2 mb-3">
-                    <span className="material-symbols-outlined text-accent text-lg">target</span>
-                    <span className="text-sm font-semibold text-accent">Key Impact</span>
-                  </div>
-                  <div className="flex flex-wrap gap-2">
-                    {item.keyMetrics.map((metric, idx) => (
-                      <span key={idx} className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-medium bg-bg-base/50 text-text-primary border border-border-subtle">
-                        <span className="text-accent">•</span>
-                        {metric}
-                      </span>
+                {item.keyMetrics && (
+                  <div className="flex flex-wrap gap-2 mb-3">
+                    {item.keyMetrics.map((metric, i) => (
+                      <span key={i} className="text-xs bg-accent/10 text-accent px-2.5 py-1 rounded-full">{metric}</span>
                     ))}
                   </div>
-                </div>
-              )}
-
-              <ul className="space-y-3 pl-1">
-                {item.achievements.map((achievement, idx) => (
-                  <li key={idx} className="flex items-start gap-3 text-text-secondary text-sm leading-relaxed">
-                    <span className="text-accent mt-2 text-[6px]">●</span>
-                    <span dangerouslySetInnerHTML={{ __html: achievement }}></span>
-                  </li>
-                ))}
-              </ul>
+                )}
+                <ul className="space-y-1.5">
+                  {item.achievements.map((achievement, i) => (
+                    <li key={i} className="text-sm text-text-secondary leading-relaxed flex gap-2">
+                      <span className="text-accent mt-1.5 flex-shrink-0 text-xs">&#9654;</span>
+                      <span dangerouslySetInnerHTML={{ __html: achievement }} />
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           ))}
         </div>

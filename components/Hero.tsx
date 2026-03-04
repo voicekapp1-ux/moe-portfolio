@@ -1,5 +1,5 @@
 import React from 'react';
-import profileImage from '../omar-profile.png';
+import profileImage from '../Mohammed elsaheb - Profile Photo.png';
 import { trackConversion } from '../utils/analytics';
 
 const Hero: React.FC = () => {

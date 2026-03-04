@@ -80,9 +80,8 @@ const Navbar: React.FC = () => {
               href="Mohammed M. ElSaheb CV - 19.0.pdf"
               download
               onClick={handleCVDownload}
-              className="hidden md:flex items-center gap-1.5 bg-accent hover:bg-accent-muted text-white px-3 py-1.5 rounded text-xs font-medium transition-colors duration-300"
+                          className="hidden md:flex bg-accent hover:bg-accent-muted text-white px-3 py-1.5 rounded text-xs font-medium transition-colors duration-300"
             >
-              <span className="material-symbols-outlined text-sm">download</span>
               Download CV
             </a>
           </div>

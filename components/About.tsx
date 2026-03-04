@@ -33,11 +33,9 @@ const About: React.FC = () => {
             {/* Info tags */}
             <div className="flex flex-wrap gap-3">
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-bg-surface border border-border-subtle text-sm text-text-secondary">
-                <span className="material-symbols-outlined text-accent text-base">location_on</span>
                 Amman, Jordan
               </span>
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-bg-surface border border-border-subtle text-sm text-text-secondary">
-                <span className="material-symbols-outlined text-accent text-base">translate</span>
                 Arabic (Native), English (Fluent)
               </span>
             </div>

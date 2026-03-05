@@ -4,7 +4,7 @@ import { trackNavigation, trackConversion, trackEvent } from '../utils/analytics
 const Navbar: React.FC = () => {
   const [activeSection, setActiveSection] = useState('about');
 
-  const navItems = ['About', 'Experience', 'Skills', 'Education', 'Contact'];
+    const navItems = ['About', 'Experience', 'Projects', 'Skills', 'Education', 'Contact'];
 
   useEffect(() => {
     const observerOptions = {

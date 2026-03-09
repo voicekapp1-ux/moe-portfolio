@@ -36,8 +36,7 @@ const Hero: React.FC = () => {
               <div className="inline-block text-accent text-xs font-medium uppercase tracking-wider">
                 <span className="inline-block text-accent text-xs font-medium uppercase tracking-wider">Senior Technical Product Manager</span>
               </div>
-              
-              </div>
+
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold leading-[1.1] tracking-tight text-text-primary">
                 Mohammad El Saheb
               </h1>
